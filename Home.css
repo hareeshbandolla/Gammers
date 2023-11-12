@@ -1,0 +1,623 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: rgb(20, 32, 51);
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: skyblue;
+    border-radius: 6px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(10, 0, 0);
+    transition: 0.5s;
+    z-index: 1000; 
+}
+header.sticky{
+    background: rgb(19, 30, 71);
+    box-shadow: 0 5px 10px rgb(41, 40, 40);
+}
+header .logo{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px white;
+}
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin: 10px;
+}
+header ul li a{
+    color : white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header ul li a:hover{
+    background: skyblue;
+    color: black;
+    box-shadow: 0 0 10px blue;
+}
+header .action .searchBx{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+}
+header .action .searchBx:hover{
+    box-shadow: 0 0 20px aqua;
+}
+header .action .searchBx i{
+    font-size: 1.4em;
+    margin: 5px;
+    color: black;
+}
+header .action .searchBx input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: black;
+}
+
+/* Home Banner */
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.banner .bg .content{
+    width: 50%;
+    height: 100%;
+}
+.banner .bg .content h2{
+    font-size: 4em;
+    color: white;
+    letter-spacing: 1px;
+}
+.banner .bg .content p{
+    font-size: 1em;
+    color: white;
+    letter-spacing: 1px;
+}
+.banner .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid skyblue;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+.banner .bg img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+  height: 70vh;
+  box-shadow: -8px -8px  50px white;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 1;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.banner .bg .content a:hover{
+    background-color: aqua;
+    box-shadow: 0 0 10px aqua;
+    color: black;
+
+}
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .contentBx{
+    width: 50%;
+    margin: 20px;
+}
+.about img{
+    border-radius: 20px;
+    margin-right: 10%;
+    box-shadow: 0 0 20px aqua;
+}
+.about .contentBx h2{
+    font-size: 3em;
+    font-weight: 700;
+    color: white;
+}
+.about .contentBx p{
+    max-width: 600px;
+    text-align: justify;
+    color: white;
+}
+.about .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid skyblue;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+.contentBx a:hover{
+    background: skyblue;
+    border: none;
+    color: black;
+    box-shadow: 0 0 10px skyblue;
+}
+/* Games */
+.games{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+
+}
+.games h2{
+    color: white;
+    margin:10px 0;
+}
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.games ul li{
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+}
+.games ul li.active{
+    background-color: aqua;
+    color: black;
+    box-shadow: 0 0 10px aqua;
+}
+.cardBx{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.games .cardBx .card{
+    width: 270px;
+    border-radius: 20px;
+    margin: 20px 40px;
+    background: rgb(11, 11, 46);
+
+}
+
+.games .cardBx .card .content{
+    padding: 10px;
+}
+.games .cardBx .card .content h4{
+    color: white;
+    margin: 15px 0;
+}
+.games .cardBx .card .progress-line{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgb(79, 79, 206);
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.games .cardBx .card .progress-line span{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: aqua;
+    box-shadow: 0 0 10px aqua;
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.games .cardBx .card .info{
+    border-top: 2px solid rgb(41, 41, 96);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.games .cardBx .card .info p{
+    font-size: 1em;
+    color: white;
+}
+.games .cardBx .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid aqua;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+.games .cardBx .card .info a:hover{
+    background: aqua;
+    color: black;
+    border: none;
+    box-shadow:  0 0 10px aqua;
+}
+.card img{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    padding:5px;
+    box-shadow: 0 0 5px rgb(148, 182, 182);
+}
+.games .cardBx .card .hide{
+    display: none;
+    
+}
+.tournments{
+    padding: 0px 100px;
+    width: 100%;
+    min-width:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tournments h2{
+    color: white;
+    margin: 10px 0;
+}
+.tournments .boxBx{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.tournments .boxBx .box{
+    width: 350px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: rgb(12, 14, 15);
+    overflow: hidden;
+}
+.tournments .boxBx .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.tournments .boxBx .box .content{
+    padding: 10px;
+}
+.tournments .boxBx .box .content h4{
+    color: white;
+    margin-top: 15px;
+}
+.tournments .boxBx .box .content h4 span{
+    color: aqua;
+}
+.tournments .boxBx .box .content p{
+    text-align: justify;
+    color: white;
+    margin-top: 10px;
+}
+.tournments .boxBx .box .content .btn{
+    display: flex;
+    justify-content: space-between;
+}
+.tournments .boxBx .box .content .watch{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 1px;
+    box-shadow:  0 0 10px aqua;
+    background: aqua;
+}
+.tournments .boxBx .box .content .watch:hover{
+    border: 1px solid aqua;
+    color: rgb(14, 6, 6);
+    box-shadow:  none;
+}
+.tournments .boxBx .box .content .join{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid aqua;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+.tournments .boxBx .box .content .join:hover{
+    background-color: aqua;
+    border: none;
+    color: black;
+    box-shadow:  1 1 10px aqua;
+}
+
+
+/* contact */
+
+.contact{
+    padding: 20px 100px;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: -5px -5px  20px white;
+    margin : 20px; 
+    
+}
+.contact form{
+    width: 50%;
+    margin-left: 20%;
+    /* padding-left: 30px; */
+}
+.contact .form h1{
+    color: rgb(45, 232, 246);
+    padding: 10px;
+}
+.contact .form .inputBx p{
+    color: rgb(228, 238, 213);
+}
+.contact .form .inputBx input,
+.contact .form .inputBx textarea{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    color: white;
+    background: rgb(13, 13, 70);
+    min-height: 15px;
+    font-size: 1.1em;
+}
+.contact .form .inputBx textarea{
+    height: 150px;
+}
+.contact .form .inputBx input[type="submit"]{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    outline: one;
+    background: transparent;
+    border: 1px solid aqua;
+    text-decoration: none;
+    font-weight: 700;
+    width: 150px;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+.submit{
+    box-shadow: 0 0 10px aqua;
+}
+.contact .form .inputBx input[type="submit"]:hover{
+    background: aqua;
+    border: none;
+    color: black;
+    box-shadow: 0 0 10px aqua; 
+}
+
+/* footer */
+
+footer{
+    padding: 10px 100px;
+}
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .info .logo{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+footer .info p{
+    color: white;
+}
+footer .info ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .info ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid aqua;
+    
+}
+footer .info ul li:hover{
+    background-color: aqua; 
+    border: none;
+    box-shadow: 0 0 10px aqua; 
+}
+footer .info ul li a i{
+    font-size: 1.5em;
+    color: rgb(232, 203, 203);
+}
+footer .info ul li:hover a i{
+    color: rgb(9, 2, 2);
+}
+.animaX{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 3s ease;
+}
+.animaX.active{
+    transform: translateY(0px);
+    opacity:1 ;
+}
+
+/* responsive design */
+
+@media (max-width : 991px)
+{
+    header{
+        padding: 15px 40px;
+    }
+    header .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(6, 4, 44);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+    header .nav .active{
+        display: flex;
+    }
+    header .nav li{
+        margin: 20px 0;
+    }
+    header .nav li a{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .togglemenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(back.jpg);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .togglemenu.active{
+        background: url(background.jpg);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+    }
+    .banner .bg img{
+        position: absolute;
+    }
+    .banner .bg .content{
+        width: 100%;
+        height: 100%;
+        background: rgb(27 33 65 / 50%);
+        padding: 20px;
+        z-index: 1;
+        border-radius: 10px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .contentBx{
+        width: 100%;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact img{
+        height: 100%;
+        width: 100%;
+    }
+    .contact .form{
+        width: 100%;
+        margin: 30px;
+        padding: 10px;
+    }
+    .content .form h1{
+        text-align: center;
+    }
+    footer .info{
+        flex-direction: column;
+    }
+}
